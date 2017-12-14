@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import Button from '../Button';
 import Month from '../Month';
 import Explanation from '../Explanation';
 import FeedItem from '../FeedItem';
@@ -42,6 +44,12 @@ function January(props) {
     );
 }
 
+const FacebookPostWithExplanation = styled(FacebookPost)`
+    @media (min-width: 1200px) {
+        transform: translate(-200px);
+    }
+`;
+
 class Post_1316091521762931 extends React.Component {
     constructor() {
         super();
@@ -79,19 +87,22 @@ class Post_1316091521762931 extends React.Component {
     render() {
         return (
             <FeedItem>
-                <FacebookPost
+                <FacebookPostWithExplanation
                     item={this.props.feed.facebook['dejakob/posts/1316091521762931']}
                 >
-                    <Explanation>
-                        <p>No one seemed to crack this at the time, but it was very simple:</p>
-                        <p>First decode the base64 string to binary, then convert the binary to text</p>
-                        <button onClick={this.decodeBase64} disabled={this.state.isBase64Decoded}>Base64 decode</button>
-                        <button onClick={this.decodeBinary} disabled={!this.state.isBase64Decoded || this.state.isBinaryDecoded}>Binary decode</button>
-                        <pre>
+                    <Explanation
+                        description={`
+                            No one seemed to crack this at the time, but it was very simple:
+                            First decode the base64 string to binary, then convert the binary to text
+                        `}
+                    >
+                        <Button onClick={this.decodeBase64} disabled={this.state.isBase64Decoded}>Base64 decode</Button>
+                        <Button onClick={this.decodeBinary} disabled={!this.state.isBase64Decoded || this.state.isBinaryDecoded}>Binary decode</Button>
+                        <p>
                             {this.state.decodedValue}
-                        </pre>
+                        </p>
                     </Explanation>
-                </FacebookPost>
+                </FacebookPostWithExplanation>
             </FeedItem>
         )
     }

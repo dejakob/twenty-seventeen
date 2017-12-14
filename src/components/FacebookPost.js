@@ -66,7 +66,9 @@ function FacebookPost(props) {
     }
 
     return (
-        <Container>            
+        <Container
+            className={props.className}
+        >            
             {item.text.split('\n').map(item => (
                 <Paragraph style={pStyle}>
                     {item}
