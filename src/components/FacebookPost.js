@@ -72,6 +72,7 @@ function FacebookPost(props) {
                     {item}
                 </Paragraph>
             ))}
+            {props.children}
             <Footer>
                 {moment(item.date, 'YYYY-MM-DD').format('dddd, MMMM Do YYYY')}
             </Footer>
