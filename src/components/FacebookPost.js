@@ -30,9 +30,15 @@ const Container = styled.div`
     }
 `;
 const Paragraph = styled.p`
-    fontSize: 16px;
+    font-size: 16px;
     line-height: 22px;
     padding: 24px;
+    word-wrap: break-word;
+    text-align: justify;
+
+    &+p {
+        padding-top: 0;
+    }
 `;
 const Footer = styled.div`
     background-color: #f7f7f7;
@@ -44,22 +50,28 @@ const Footer = styled.div`
 function FacebookPost(props) {
     const { item } = props;
 
+    console.log('item', item);
+
     const pStyle = {};
 
     if (item.text.length < 200) {
         pStyle.fontSize = '22px';
         pStyle.lineHeight = '30px';
+        pStyle.textAlign = 'left';
     }
     if (item.text.length < 100) {
         pStyle.fontSize = '26px';
         pStyle.lineHeight = '32px';
+        pStyle.textAlign = 'center';
     }
 
     return (
-        <Container>
-            <Paragraph style={pStyle}>
-                {item.text}
-            </Paragraph>
+        <Container>            
+            {item.text.split('\n').map(item => (
+                <Paragraph style={pStyle}>
+                    {item}
+                </Paragraph>
+            ))}
             <Footer>
                 {moment(item.date, 'YYYY-MM-DD').format('dddd, MMMM Do YYYY')}
             </Footer>
