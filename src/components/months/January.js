@@ -57,7 +57,7 @@ const ExplanationCode = styled.code`
     overflow: auto;
 `;
 
-// Todo: slide transition
+// Todo: slide transition on scroll to position
 class Post_1316091521762931 extends React.Component {
     constructor() {
         super();
