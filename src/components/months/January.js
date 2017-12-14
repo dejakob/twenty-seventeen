@@ -49,6 +49,13 @@ const FacebookPostWithExplanation = styled(FacebookPost)`
         transform: translate(-200px);
     }
 `;
+const ExplanationCode = styled.code`
+    display: block;
+    margin-top: 24px;
+    line-height: 24px;
+    max-height: 100px;
+    overflow: auto;
+`;
 
 class Post_1316091521762931 extends React.Component {
     constructor() {
@@ -98,9 +105,9 @@ class Post_1316091521762931 extends React.Component {
                     >
                         <Button onClick={this.decodeBase64} disabled={this.state.isBase64Decoded}>Base64 decode</Button>
                         <Button onClick={this.decodeBinary} disabled={!this.state.isBase64Decoded || this.state.isBinaryDecoded}>Binary decode</Button>
-                        <p>
+                        <ExplanationCode>
                             {this.state.decodedValue}
-                        </p>
+                        </ExplanationCode>
                     </Explanation>
                 </FacebookPostWithExplanation>
             </FeedItem>
