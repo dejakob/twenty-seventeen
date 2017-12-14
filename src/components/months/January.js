@@ -57,6 +57,7 @@ const ExplanationCode = styled.code`
     overflow: auto;
 `;
 
+// Todo: slide transition
 class Post_1316091521762931 extends React.Component {
     constructor() {
         super();
