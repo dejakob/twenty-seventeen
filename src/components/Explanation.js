@@ -1,18 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+`;
 const Container = styled.summary`
     border-radius: 3px;
     background-color: #f4fbff;
     padding: 24px;
-
-    @media (min-width: 1200px) {
-        position: absolute;
-        top: 0;
-        left: 620px;
-        width: 380px;
-
-    }
 `;
 const Description = styled.p`
     font-family: 'Sacramento', cursive;
@@ -23,12 +19,17 @@ const Description = styled.p`
 
 function Explanation(props) {
     return (
-        <Container>
-            <Description>
-                {props.description}
-            </Description>
-            {props.children}
-        </Container>
+        <Wrapper
+            className={props.className}
+            style={props.style}
+        >
+            <Container>
+                <Description>
+                    {props.description}
+                </Description>
+                {props.children}
+            </Container>
+        </Wrapper>
     );
 }
 

@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import OnVisible from 'react-on-visible';
+import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Month from '../Month';
-import Explanation from '../Explanation';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
+import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
 
 // Add FB post with atob and binary decription
 function January(props) {
@@ -44,11 +45,7 @@ function January(props) {
     );
 }
 
-const FacebookPostWithExplanation = styled(FacebookPost)`
-    @media (min-width: 1200px) {
-        transform: translate(-200px);
-    }
-`;
+
 const ExplanationCode = styled.code`
     display: block;
     margin-top: 24px;
@@ -95,11 +92,11 @@ class Post_1316091521762931 extends React.Component {
     render() {
         return (
             <FeedItem>
-                <FacebookPostWithExplanation
-                    item={this.props.feed.facebook['dejakob/posts/1316091521762931']}
-                >
-                    <Explanation
-                        description={`
+                <OnVisible>
+                    <FacebookPostWithExplanation
+                        alignExplanationLeft={true}
+                        item={this.props.feed.facebook['dejakob/posts/1316091521762931']}
+                        explanation={`
                             No one seemed to crack this at the time, but it was very simple:
                             First decode the base64 string to binary, then convert the binary to text
                         `}
@@ -109,8 +106,8 @@ class Post_1316091521762931 extends React.Component {
                         <ExplanationCode>
                             {this.state.decodedValue}
                         </ExplanationCode>
-                    </Explanation>
-                </FacebookPostWithExplanation>
+                    </FacebookPostWithExplanation>
+                </OnVisible>
             </FeedItem>
         )
     }
