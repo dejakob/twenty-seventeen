@@ -46,13 +46,22 @@ const Footer = styled.div`
     font-size: 14px;
     padding: 16px;
 `;
+const Figure = styled.figure`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+`;
+const Image = styled.img`
+    max-height: 400px;
+    max-width: 100%;
+`;
 
 function FacebookPost(props) {
     const { item } = props;
-
-    console.log('item', item);
-
     const pStyle = {};
+
+    let media = null;
 
     if (item.text.length < 200) {
         pStyle.fontSize = '22px';
@@ -65,6 +74,16 @@ function FacebookPost(props) {
         pStyle.textAlign = 'center';
     }
 
+    if (item.image) {
+        media = (
+            <Figure>
+                <Image
+                    src={item.image}
+                />
+            </Figure>    
+        );
+    }
+
     return (
         <Container
             className={props.className}
@@ -75,6 +94,7 @@ function FacebookPost(props) {
                 </Paragraph>
             ))}
             {props.children}
+            {media}
             <Footer>
                 {moment(item.date, 'YYYY-MM-DD').format('dddd, MMMM Do YYYY')}
             </Footer>
