@@ -9,12 +9,23 @@ const Container = styled.summary`
     border-radius: 3px;
     background-color: #f4fbff;
     padding: 24px;
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        background: none;
+        width: 100%;
+        color: #293a7b;
+        text-align: center;
+    }
 `;
-const Description = styled.p`
+const Description = styled.div`
     font-family: 'Sacramento', cursive;
     font-size: 36px;
     font-weight: 100;
-    margin-bottom: 24px;
+
+    & p + p {
+        margin-top: 16px;
+    }
 `;  
 
 function Explanation(props) {
@@ -25,7 +36,7 @@ function Explanation(props) {
         >
             <Container>
                 <Description>
-                    {props.description}
+                    {props.description.split('\n').filter(line => line.trim().length > 0).map(line => <p>{line}</p>)}
                 </Description>
                 {props.children}
             </Container>

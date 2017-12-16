@@ -1,5 +1,4 @@
 import React from 'react';
-import OnVisible from 'react-on-visible';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Month from '../Month';
@@ -9,8 +8,6 @@ import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
 
 // Add FB post with atob and binary decription
 function January(props) {
-    console.log('feed', props.feed);
-
     return (
         <Month
             title="January"
@@ -32,9 +29,13 @@ function January(props) {
                 />
             </FeedItem>
             <FeedItem>
-                <FacebookPost
+                <FacebookPostWithExplanation
                     item={props.feed.facebook['dejakob/posts/1319690541403029']}
-                />
+                    explanation={`
+                        Or... in other words...
+                        Make data driven decissions
+                    `}
+                ></FacebookPostWithExplanation>
             </FeedItem>
             <FeedItem>
                 <FacebookPost
@@ -52,6 +53,9 @@ const ExplanationCode = styled.code`
     line-height: 24px;
     max-height: 100px;
     overflow: auto;
+`;
+const Fieldset = styled.fieldset`
+    margin-top: 16px
 `;
 
 // Todo: slide transition on scroll to position
@@ -92,22 +96,22 @@ class Post_1316091521762931 extends React.Component {
     render() {
         return (
             <FeedItem>
-                <OnVisible>
-                    <FacebookPostWithExplanation
-                        alignExplanationLeft={true}
-                        item={this.props.feed.facebook['dejakob/posts/1316091521762931']}
-                        explanation={`
-                            No one seemed to crack this at the time, but it was very simple:
-                            First decode the base64 string to binary, then convert the binary to text
-                        `}
-                    >
+                <FacebookPostWithExplanation
+                    alignExplanationLeft={true}
+                    item={this.props.feed.facebook['dejakob/posts/1316091521762931']}
+                    explanation={`
+                        No one seemed to crack this at the time, but it was very simple:
+                        First decode the base64 string to binary, then convert the binary to text
+                    `}
+                >
+                    <Fieldset>
                         <Button onClick={this.decodeBase64} disabled={this.state.isBase64Decoded}>Base64 decode</Button>
                         <Button onClick={this.decodeBinary} disabled={!this.state.isBase64Decoded || this.state.isBinaryDecoded}>Binary decode</Button>
-                        <ExplanationCode>
-                            {this.state.decodedValue}
-                        </ExplanationCode>
-                    </FacebookPostWithExplanation>
-                </OnVisible>
+                    </Fieldset>
+                    <ExplanationCode>
+                        {this.state.decodedValue}
+                    </ExplanationCode>
+                </FacebookPostWithExplanation>
             </FeedItem>
         )
     }

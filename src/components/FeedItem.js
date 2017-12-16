@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import OnVisible from 'react-on-visible';
 
 const Section = styled.section`
     position: relative;
 
     &+section {
-        margin-top: 20vh;
+        margin-top: 30vh;
     }
 `;
 
 function FeedItem(props) {
     return (
         <Section>
-            {props.children}
+            <OnVisible>
+                {props.children}
+            </OnVisible>
         </Section>
     );
 }
