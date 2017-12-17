@@ -6,6 +6,8 @@ import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
 import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
 import Tweet from '../Tweet';
+import Divider from '../Divider';
+import Explanation from '../Explanation';
 
 function February(props) {
     const tweet = {
@@ -19,6 +21,13 @@ function February(props) {
         >
             <Tweet
                 item={tweet}
+            />
+            <Divider />
+            <Explanation
+                description={`
+                    That's it for February.
+                    I mean, it's a short month.
+                `}
             />
         </Month>
     );

@@ -5,18 +5,8 @@ import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
 import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
+import Divider from '../Divider';
 import ImageDivider from '../ImageDivider';
-
-const Line = styled.hr`
-    border-top: none;
-    border-right: 1px dashed #ccc;
-    border-bottom: none;
-    border-left: none;
-    border-image: initial;
-    height: 30vh;
-    width: 4px;
-    margin-top: -10px;
-`;
 
 // Add FB post with atob and binary decription
 function January(props) {
@@ -29,21 +19,21 @@ function January(props) {
                     item={props.feed.facebook['dejakob/posts/1307694509269299']}
                 />
             </FeedItem>
-            <Line />
+            <Divider />
             <FeedItem>
                 <FacebookPost
                     item={props.feed.facebook['dejakob/posts/1309292115776205']}
                 />
             </FeedItem>
-            <Line />
+            <Divider />
             <Post_1316091521762931 {...props} />
             <FeedItem>
-            <Line />
+            <Divider />
                 <FacebookPost
                     item={props.feed.facebook['dejakob/posts/1317331584972258']}
                 />
             </FeedItem>
-            <Line />
+            <Divider />
             <FeedItem>
                 <FacebookPostWithExplanation
                     item={props.feed.facebook['dejakob/posts/1319690541403029']}
@@ -53,13 +43,13 @@ function January(props) {
                     `}
                 ></FacebookPostWithExplanation>
             </FeedItem>
-            <Line />
+            <Divider />
             <FeedItem>
                 <FacebookPost
                     item={props.feed.facebook['photo.php?fbid=1325499997488750']}
                 />
             </FeedItem>
-            <Line />
+            <Divider />
             <ImageDivider
                 imageSource="./assets/antwerp.jpg"
             />
@@ -71,7 +61,7 @@ function January(props) {
 const ExplanationCode = styled.code`
     display: block;
     margin-top: 24px;
-    line-height: 24px;
+    Divider-height: 24px;
     max-height: 100px;
     overflow: auto;
 `;
