@@ -6,6 +6,17 @@ import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
 import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
 
+const Line = styled.hr`
+    border-top: none;
+    border-right: 1px dashed #ccc;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    height: 30vh;
+    width: 4px;
+    margin-top: -10px;
+`;
+
 // Add FB post with atob and binary decription
 function January(props) {
     return (
@@ -17,17 +28,21 @@ function January(props) {
                     item={props.feed.facebook['dejakob/posts/1307694509269299']}
                 />
             </FeedItem>
+            <Line />
             <FeedItem>
                 <FacebookPost
                     item={props.feed.facebook['dejakob/posts/1309292115776205']}
                 />
             </FeedItem>
+            <Line />
             <Post_1316091521762931 {...props} />
             <FeedItem>
+            <Line />
                 <FacebookPost
                     item={props.feed.facebook['dejakob/posts/1317331584972258']}
                 />
             </FeedItem>
+            <Line />
             <FeedItem>
                 <FacebookPostWithExplanation
                     item={props.feed.facebook['dejakob/posts/1319690541403029']}
@@ -37,6 +52,7 @@ function January(props) {
                     `}
                 ></FacebookPostWithExplanation>
             </FeedItem>
+            <Line />
             <FeedItem>
                 <FacebookPost
                     item={props.feed.facebook['photo.php?fbid=1325499997488750']}

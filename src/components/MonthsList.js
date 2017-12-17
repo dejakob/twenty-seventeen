@@ -1,9 +1,10 @@
 import React from 'react';
 import January from './months/January';
+import February from './months/February';
 
 function MonthsList(props) {
     const { feed } = props;
-    const months = [ January ];
+    const months = [ January, February ];
 
     return (
         <ul>

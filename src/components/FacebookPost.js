@@ -12,22 +12,20 @@ const Container = styled.div`
     width: 600px;
     max-width: 90%;
     margin: 0 auto;
-
-    &::before {
-        content: '';
-        display: block;
-        background-image: url('./assets/fb-profile-pic-100x100.jpg');
-        background-size: cover;
-        background-position: center center;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        position: absolute;
-        top: -60px;
-        left: 50%;
-        margin-left: -25px;
-        border: 3px #3b5998 solid;
-    }
+`;
+const Avatar = styled.figure`
+    display: block;
+    background-image: url('./assets/fb-profile-pic-100x100.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    margin-left: -25px;
+    border: 3px #3b5998 solid;
 `;
 const Paragraph = styled.p`
     font-size: 16px;
@@ -88,6 +86,7 @@ function FacebookPost(props) {
         <Container
             className={props.className}
         >            
+            <Avatar />
             {item.text.split('\n').map(item => (
                 <Paragraph style={pStyle}>
                     {item}

@@ -4,10 +4,6 @@ import OnVisible from 'react-on-visible';
 
 const Section = styled.section`
     position: relative;
-
-    &+section {
-        margin-top: 30vh;
-    }
 `;
 
 function FeedItem(props) {
