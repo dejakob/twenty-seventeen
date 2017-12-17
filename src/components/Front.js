@@ -5,7 +5,10 @@ const FrontBackground = styled.article`
     background-image: url(./assets/amsterdam-panorama.jpg);
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
+
+    @media (min-width: 1200px) {
+        background-attachment: fixed;
+    }
 `;
 const FrontOverlay = styled.div`
     display: flex;

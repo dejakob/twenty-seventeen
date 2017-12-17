@@ -5,6 +5,7 @@ import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
 import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
+import ImageDivider from '../ImageDivider';
 
 const Line = styled.hr`
     border-top: none;
@@ -58,6 +59,10 @@ function January(props) {
                     item={props.feed.facebook['photo.php?fbid=1325499997488750']}
                 />
             </FeedItem>
+            <Line />
+            <ImageDivider
+                imageSource="./assets/antwerp.jpg"
+            />
         </Month>
     );
 }

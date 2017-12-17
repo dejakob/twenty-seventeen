@@ -11,6 +11,21 @@ function April(props) {
         <Month
             title="April"
         >
+            <FeedItem>
+                <FacebookPostWithExplanation
+                    item={props.feed.facebook['dejakob/posts/1411105048928244']}
+                    explanation={`
+                        This is not a funny story,
+                        but it's an important one.
+                    `}
+                >
+                    <Button
+                        onClick={() => {}}
+                    >
+                        Read
+                    </Button>
+                </FacebookPostWithExplanation>
+            </FeedItem>
         </Month>
     );
 }
