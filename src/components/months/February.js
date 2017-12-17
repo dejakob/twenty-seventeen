@@ -28,6 +28,7 @@ function February(props) {
                     I mean, it's a short month.
                 `}
             />
+            <Divider />
             <ImageDivider
                 imageSource="./assets/antwerp2.jpg"
             />

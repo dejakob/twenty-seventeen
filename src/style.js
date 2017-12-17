@@ -49,8 +49,18 @@ q:before, q:after {
 table {
  border-collapse: collapse;
  border-spacing: 0;
-}    
+}
 
+
+dialog {
+  border: none;
+  height: auto;
+  width: auto;
+  position: initial;
+  left: auto;
+  right: auto;
+  padding: 0;
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
