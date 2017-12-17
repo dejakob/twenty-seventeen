@@ -3,11 +3,10 @@ import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Month from '../Month';
 import FeedItem from '../FeedItem';
-import FacebookPost from '../FacebookPost';
-import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
 import Tweet from '../Tweet';
 import Divider from '../Divider';
 import Explanation from '../Explanation';
+import ImageDivider from '../ImageDivider';
 
 function February(props) {
     const tweet = {
@@ -28,6 +27,9 @@ function February(props) {
                     That's it for February.
                     I mean, it's a short month.
                 `}
+            />
+            <ImageDivider
+                imageSource="./assets/antwerp2.jpg"
             />
         </Month>
     );
