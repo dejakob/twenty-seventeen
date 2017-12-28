@@ -51,7 +51,7 @@ function January(props) {
             </FeedItem>
             <Divider />
             <ImageDivider
-                imageSource="./assets/antwerp.jpg"
+                imageSource="/assets/antwerp.jpg"
             />
         </Month>
     );

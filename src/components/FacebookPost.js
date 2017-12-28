@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 const Avatar = styled.figure`
     display: block;
-    background-image: url('./assets/fb-profile-pic-100x100.jpg');
+    background-image: url('/assets/fb-profile-pic-100x100.jpg');
     background-size: cover;
     background-position: center center;
     height: 50px;

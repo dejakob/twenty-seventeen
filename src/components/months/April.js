@@ -77,7 +77,7 @@ const Dialog = styled.dialog`
     align-items: center;
     justify-content: flex-start;
 
-    background: rgba(0,0,0,0.8);
+    background: #fff;
     overflow: auto;
 `;
 const Page = styled.article`

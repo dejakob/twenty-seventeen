@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FrontBackground = styled.article`
-    background-image: url(./assets/amsterdam-panorama.jpg);
+    background-image: url(/assets/amsterdam-panorama.jpg);
     background-size: cover;
     background-position: center center;
 

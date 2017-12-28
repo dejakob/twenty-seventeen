@@ -30,7 +30,7 @@ function February(props) {
             />
             <Divider />
             <ImageDivider
-                imageSource="./assets/antwerp2.jpg"
+                imageSource="/assets/antwerp2.jpg"
             />
         </Month>
     );
