@@ -34,7 +34,7 @@ const swagTextAnimation = keyframes`
 `;
 const SwagText = styled.p`
     font-size: 24px;
-    margin-bottom: 30px;
+    margin: 16px 0 32px 0;
 
     & em {
         font-size: 36px;
@@ -52,6 +52,17 @@ function March(props) {
             title="March"
         >
             <FeedItem>
+                <Divider />
+                <FacebookPostWithExplanation
+                    item={props.feed.facebook['dejakob/posts/1355723241133092']}
+                    explanation={`
+                        Special thanks to everyone who was involved in any of my movings 👍
+                    `}
+                />
+                <Divider />
+                <FacebookPost
+                    item={props.feed.facebook['photo.php?fbid=1368428879862528&set=a.452807001424725.98241.100000862866272&type=3&permPage=1']}
+                />
                 <Divider />
                 <SlideToCenter>
                     <img src="/assets/icons8-rollerblade.png" />

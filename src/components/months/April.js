@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
+import Divider from '../Divider';
 import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
@@ -39,6 +40,7 @@ class Post_1411105048928244 extends React.Component {
     render() {
         return (
             <div>
+                <Divider />
                 <FacebookPostWithExplanation
                     item={this.props.feed.facebook['dejakob/posts/1411105048928244']}
                     explanation={`
@@ -55,6 +57,7 @@ class Post_1411105048928244 extends React.Component {
                 <StoryView
                     visible={this.state.storyVisible}
                 />
+                <Divider />
             </div>
         );
     }
