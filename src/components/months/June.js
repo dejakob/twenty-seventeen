@@ -8,6 +8,22 @@ import FacebookPost from '../FacebookPost';
 import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
 import Tweet from '../Tweet';
 
+const H2 = styled.h2`
+    font-size: 28px;
+    margin-bottom: 32px;
+`;
+const Emojis = styled.p`
+    font-size: 36px;
+    margin-bottom: 32px;
+`;
+const Center = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+`;
+
 function June(props) {
     const tweet = {
         text: 'I also want a hug from @ArianaGrande now 😍 #OneLoveManchester',
@@ -22,6 +38,12 @@ function June(props) {
             <Tweet
                 item={tweet}
             />
+            <Divider />
+            <Center>
+                <H2>The end of FLAVR</H2>
+                <Emojis>🔥🔥🔥</Emojis>
+                <Divider />
+            </Center>
         </Month>
     );
 }

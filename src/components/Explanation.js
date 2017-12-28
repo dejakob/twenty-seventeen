@@ -12,10 +12,8 @@ const Container = styled.summary`
     text-align: center;
 
     @media (min-width: 1200px) {
-        background: none;
         width: 100%;
         color: #293a7b;
-        background-color: #f4fbff;
     }
 `;
 const Description = styled.div`
