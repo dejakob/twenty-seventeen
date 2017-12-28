@@ -47,6 +47,14 @@ class Post_1411105048928244 extends React.Component {
                 />
                 <Divider />
                 <FacebookPostWithExplanation
+                    item={this.props.feed.facebook['dejakob/posts/1391176094254473']}
+                    explanation={`
+                        💣 alert 😱😱😱😱
+                    `}
+                />
+                <Divider />
+                <FacebookPostWithExplanation
+                    alignExplanationLeft
                     item={this.props.feed.facebook['dejakob/posts/1411105048928244']}
                     explanation={`
                         This is not a funny story,
@@ -55,6 +63,7 @@ class Post_1411105048928244 extends React.Component {
                 >
                     <Button
                         onClick={this.showStory}
+                        style={{ marginTop: '16px' }}
                     >
                         Read
                     </Button>

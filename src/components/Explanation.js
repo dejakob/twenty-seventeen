@@ -7,15 +7,15 @@ const Wrapper = styled.div`
 `;
 const Container = styled.summary`
     border-radius: 3px;
-    background-color: #f4fbff;
     padding: 24px;
     width: 100%;
+    text-align: center;
 
     @media (min-width: 1200px) {
         background: none;
         width: 100%;
         color: #293a7b;
-        text-align: center;
+        background-color: #f4fbff;
     }
 `;
 const Description = styled.div`
@@ -36,7 +36,7 @@ function Explanation(props) {
         >
             <Container>
                 <Description>
-                    {props.description.split('\n').filter(line => line.trim().length > 0).map(line => <p>{line}</p>)}
+                    {props.description.split('\n').filter(line => line.trim().length > 0).map(line => <p>{line.trim()}</p>)}
                 </Description>
                 {props.children}
             </Container>
