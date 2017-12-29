@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Divider from '../Divider';
+import ImageDivider from '../ImageDivider';
 import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
@@ -44,6 +45,10 @@ function June(props) {
                 <Emojis>🔥🔥🔥</Emojis>
                 <Divider />
             </Center>
+            <Divider />
+            <ImageDivider
+                imageSource="/assets/antwerp6.jpg"
+            />
         </Month>
     );
 }

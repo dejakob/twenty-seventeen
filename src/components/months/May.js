@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Divider from '../Divider';
+import ImageDivider from '../ImageDivider';
 import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
@@ -42,6 +43,9 @@ function May(props) {
                 </Center>
             </FeedItem>
             <Divider />
+            <ImageDivider
+                imageSource="/assets/antwerp5.jpg"
+            />
         </Month>
     );
 }
