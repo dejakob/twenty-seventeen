@@ -27,6 +27,7 @@ const Figure = styled.figure`
 
     @media (min-width: 1200px) {
         background-attachment: fixed;
+        height: 50vh;
     }
 `;
 
