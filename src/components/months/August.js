@@ -63,7 +63,7 @@ const GCenter = styled.div`
     flex-wrap: wrap;
 
     + div {
-        margin-top: 16px;
+        margin-top: 48px;
     }
 `;
 const GeoowSection = styled.section`
@@ -96,7 +96,6 @@ const GeoowLink = styled.a`
     }
 `;
 const GeoowEventListWrapper = styled.div`
-    margin-top: 32px;
     overflow: auto;
 `;
 const GeoowEventList = styled.ul`

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Front from './Front';
+import Footer from './Footer';
 import MonthsList from './MonthsList';
 import facebook from '../facebook.json';
 
@@ -21,6 +22,7 @@ class App extends Component {
                 <MonthsList
                     feed={feed}
                 />
+                <Footer />
             </Main>
         );
     }

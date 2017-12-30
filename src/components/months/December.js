@@ -20,15 +20,15 @@ function December(props) {
             title="December"
         >
             <Divider />
-                <InstagramWrapper>
-                    <InstagramEmbed
-                        url="https://www.instagram.com/p/Bcxdv_NAo2Y"
-                    />
-                    <Divider />
-                    <InstagramEmbed
-                        url="https://www.instagram.com/p/BdIJ_WrAMdq"
-                    />
-                </InstagramWrapper>
+            <InstagramWrapper>
+                <InstagramEmbed
+                    url="https://www.instagram.com/p/Bcxdv_NAo2Y"
+                />
+                <Divider />
+                <InstagramEmbed
+                    url="https://www.instagram.com/p/BdIJ_WrAMdq"
+                />
+            </InstagramWrapper>
             <Divider />
         </Month>
     );
