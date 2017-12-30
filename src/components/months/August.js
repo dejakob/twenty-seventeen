@@ -133,7 +133,9 @@ class GeoowEvents extends Component {
         return (
             <GeoowSection>
                 <Center>
-                    <img src="/assets/logo@2x.png" alt="Geoow logo" height="200" />
+                    <a href="http://geoow.com" target="_blank">
+                        <img src="/assets/logo@2x.png" alt="Geoow logo" height="200" />
+                    </a>    
                 </Center>
                 <Center>
                     <GeoowLink
@@ -164,23 +166,28 @@ class GeoowEvents extends Component {
                 <GeoowEventListWrapper>
                     <WideGeoowEventList>
                         {Object.keys(this.state.events).map(event =>
-                            <GeoowEvent>
-                                <figure>
-                                    <img
-                                        src={this.state.events[event].cover.source}
-                                        alt={this.state.events[event].name}
-                                        width={268}
-                                    />
-                                    <figcaption>
-                                        <h3>
-                                            {this.state.events[event].name}
-                                        </h3>
-                                        <p>
-                                            {this.state.events[event].description.substr(0, 300)}...
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </GeoowEvent>
+                            <a
+                                href={`http://facebook.com/${this.state.events[event].originalEventData.id}`}
+                                target="_blank"
+                            >
+                                <GeoowEvent>
+                                    <figure>
+                                        <img
+                                            src={this.state.events[event].cover.source}
+                                            alt={this.state.events[event].name}
+                                            width={300}
+                                        />
+                                        <figcaption>
+                                            <h3>
+                                                {this.state.events[event].name}
+                                            </h3>
+                                            <p>
+                                                {this.state.events[event].description.substr(0, 300)}...
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </GeoowEvent>
+                            </a>
                         )}
                     </WideGeoowEventList>
                 </GeoowEventListWrapper>

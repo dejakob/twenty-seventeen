@@ -68,5 +68,8 @@ body {
 .handwriting {
     font-family: 'Sacramento', cursive;
 }
+a {
+    text-decoration: none;
+}
 
 `;
