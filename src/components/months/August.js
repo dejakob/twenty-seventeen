@@ -28,6 +28,7 @@ function August(props) {
         <Month
             title="August"
         >
+            <Divider />
             <FeedItem>
                 <GeoowEvents />
             </FeedItem>  
