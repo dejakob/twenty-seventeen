@@ -1,5 +1,5 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed';
+import InstagramEmbed from '../Instagram';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Divider from '../Divider';
