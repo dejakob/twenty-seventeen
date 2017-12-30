@@ -2,6 +2,7 @@
   "name": "twenty-seventeen",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://dejakob.com/2017",
   "dependencies": {
     "moment": "^2.19.4",
     "react": "^16.2.0",
