@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
+import Divider from '../Divider';
 import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
 import FacebookPostWithExplanation from '../FacebookPostWithExplanation';
+
+const Center = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+`;
+const SlideToCenter = styled(Center)`
+    transform: translate(-100%);
+    transition: transform 2s;
+
+    .visible & {
+        transform: translate(0);
+    }
+`;
 
 function August(props) {
     return (
@@ -13,12 +29,27 @@ function August(props) {
         >
             <FeedItem>
                 <GeoowEvents />
-            </FeedItem>    
+            </FeedItem>  
+            <Divider />
+            <FeedItem>
+                <FacebookPostWithExplanation
+                    item={props.feed.facebook['photo.php?fbid=1538048176233930&set=a.452807001424725.98241.100000862866272&type=3&theater']}
+                    explanation={`
+                        An end has a start I guess
+                    `}
+                ></FacebookPostWithExplanation>
+            </FeedItem>
+            <Divider />
+            <FeedItem>
+                <SlideToCenter>
+                    <img src="/assets/icons8-steam_engine.png" />
+                </SlideToCenter>
+            </FeedItem>
         </Month>
     );
 }
 
-const Center = styled.div`
+const GCenter = styled.div`
     display: flex;
     align-items: center;
     text-align: center;
@@ -132,12 +163,12 @@ class GeoowEvents extends Component {
 
         return (
             <GeoowSection>
-                <Center>
+                <GCenter>
                     <a href="http://geoow.com" target="_blank">
                         <img src="/assets/logo@2x.png" alt="Geoow logo" height="200" />
                     </a>    
-                </Center>
-                <Center>
+                </GCenter>
+                <GCenter>
                     <GeoowLink
                         href="http://itunes.apple.com/be/app/geoow/id1272724454?mt=8"
                         target="_blank"
@@ -162,7 +193,7 @@ class GeoowEvents extends Component {
                     >
                         Contact
                     </GeoowLink>
-                </Center>
+                </GCenter>
                 <GeoowEventListWrapper>
                     <WideGeoowEventList>
                         {Object.keys(this.state.events).map(event =>
