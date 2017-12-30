@@ -7,9 +7,13 @@ const Divider = styled.hr`
     border-bottom: none;
     border-left: none;
     border-image: initial;
-    height: 30vh;
+    height: 15vh;
     width: 4px;
     margin-top: -10px;
+
+    @media (min-width: 1200px) {
+        height: 30vh;
+    }
 `;
 
 export default Divider;
