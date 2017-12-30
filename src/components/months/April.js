@@ -71,7 +71,7 @@ class Post_1411105048928244 extends React.Component {
                 </FacebookPostWithExplanation>
                 <Divider />
                 <ImageDivider
-                    imageSource="/assets/antwerp4.jpg"
+                    imageSource={`${process.env.PUBLIC_URL}/assets/antwerp4.jpg`}
                 />
             </div>
         );

@@ -44,12 +44,12 @@ function August(props) {
             <Divider />
             <FeedItem>
                 <SlideToCenter>
-                    <img src="/assets/icons8-steam_engine.png" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/icons8-steam_engine.png`} />
                 </SlideToCenter>
             </FeedItem>
             <Divider />
             <ImageDivider
-                imageSource="/assets/amsterdam.jpg"
+                imageSource={`${process.env.PUBLIC_URL}/assets/amsterdam.jpg`}
             />
         </Month>
     );
@@ -171,7 +171,7 @@ class GeoowEvents extends Component {
             <GeoowSection>
                 <GCenter>
                     <a href="http://geoow.com" target="_blank">
-                        <img src="/assets/logo@2x.png" alt="Geoow logo" height="200" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/logo@2x.png`} alt="Geoow logo" height="200" />
                     </a>    
                 </GCenter>
                 <GCenter>

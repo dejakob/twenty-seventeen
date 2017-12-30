@@ -32,7 +32,7 @@ function October(props) {
                 </InstagramWrapper>
             <Divider />
             <ImageDivider
-                imageSource="/assets/amsterdam3.jpg"
+                imageSource={`${process.env.PUBLIC_URL}/assets/amsterdam3.jpg`}
             />
         </Month>
     );

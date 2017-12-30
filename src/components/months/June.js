@@ -47,7 +47,7 @@ function June(props) {
             </Center>
             <Divider />
             <ImageDivider
-                imageSource="/assets/antwerp6.jpg"
+                imageSource={`${process.env.PUBLIC_URL}/assets/antwerp6.jpg`}
             />
         </Month>
     );

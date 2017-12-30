@@ -66,7 +66,7 @@ function March(props) {
                 />
                 <Divider />
                 <SlideToCenter>
-                    <img src="/assets/icons8-rollerblade.png" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/icons8-rollerblade.png`}/>
                 </SlideToCenter>
                 <Center>
                     <SwagText>
@@ -77,7 +77,7 @@ function March(props) {
                 </Center>
                 <Divider />
                 <ImageDivider
-                    imageSource="/assets/antwerp3.jpg"
+                    imageSource={`${process.env.PUBLIC_URL}/assets/antwerp3.jpg`}
                 />
             </FeedItem>
         </Month>
