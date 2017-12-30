@@ -42,8 +42,7 @@ function June(props) {
             <Divider />
             <Center>
                 <H2>The end of FLAVR</H2>
-                <Emojis>🔥🔥🔥</Emojis>
-                <Divider />
+                <Emojis>😫</Emojis>
             </Center>
             <Divider />
             <ImageDivider
