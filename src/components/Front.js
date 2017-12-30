@@ -17,6 +17,17 @@ const FrontOverlay = styled.div`
     justify-content: center;
     background-color: rgba(0,0,0,0.7);
     height: 100vh;
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #fff;
+        position: absolute;
+        bottom: 32px;
+    }
 `;
 const FrontTitle = styled.h1`
     padding: 0 16px;
@@ -25,6 +36,7 @@ const FrontTitle = styled.h1`
 `;
 const FrontSubtitle = styled.span`
     font-family: 'Sacramento', cursive;
+    text-align: center;
     font-size: 10vh;
     padding: 16px;
     color: #ffffff;

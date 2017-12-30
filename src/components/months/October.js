@@ -1,8 +1,9 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed'
+import InstagramEmbed from 'react-instagram-embed';
 import styled, { keyframes } from 'styled-components';
 import Button from '../Button';
 import Divider from '../Divider';
+import ImageDivider from '../ImageDivider';
 import Month from '../Month';
 import FeedItem from '../FeedItem';
 import FacebookPost from '../FacebookPost';
@@ -30,6 +31,9 @@ function October(props) {
                     />
                 </InstagramWrapper>
             <Divider />
+            <ImageDivider
+                imageSource="/assets/amsterdam3.jpg"
+            />
         </Month>
     );
 }
