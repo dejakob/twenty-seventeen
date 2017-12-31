@@ -201,35 +201,58 @@ class GeoowEvents extends Component {
                 </GCenter>
                 <GeoowEventListWrapper>
                     <WideGeoowEventList>
-                        {Object.keys(this.state.events).map(event =>
-                            <a
-                                href={`http://facebook.com/${this.state.events[event].originalEventData.id}`}
-                                target="_blank"
-                            >
-                                <GeoowEvent>
-                                    <figure>
-                                        <img
-                                            src={this.state.events[event].cover.source}
-                                            alt={this.state.events[event].name}
-                                            width={300}
-                                        />
-                                        <figcaption>
-                                            <h3>
-                                                {this.state.events[event].name}
-                                            </h3>
-                                            <p>
-                                                {this.state.events[event].description.substr(0, 300)}...
-                                            </p>
-                                        </figcaption>
-                                    </figure>
-                                </GeoowEvent>
-                            </a>
-                        )}
+                        {Object.keys(this.state.events).map(e => renderGeoowEvent(this.state.events[e]))}
                     </WideGeoowEventList>
                 </GeoowEventListWrapper>
             </GeoowSection>
         );
     }
+}
+function renderGeoowEvent(event) {
+    if (!event) {
+        return null;
+    }
+
+    const eventLink = event.originalEventData && event.originalEventData.id ? 
+        `http://facebook.com/${event.originalEventData.id}`
+    : '#';
+    const eventImage = event.cover && event.cover.source ?
+    (
+        <img
+            src={event.cover.source}
+            alt={event.name}
+            width={300}
+        />
+    ) : null;
+    const eventName = event.name ? 
+    (
+        <h3>
+            {event.name}
+        </h3>
+    ) : null;
+    const eventDescription = typeof event.description === 'string' ?
+    (
+        <p>
+            {event.description.substr(0, 300)}...
+        </p>
+    ) : null;
+
+    return (
+        <a
+            href={eventLink}
+            target="_blank"
+        >
+            <GeoowEvent>
+                <figure>
+                    {eventImage}
+                    <figcaption>
+                        {eventName}
+                        {eventDescription}
+                    </figcaption>
+                </figure>
+            </GeoowEvent>
+        </a>
+    );
 }
 
 export default August;
