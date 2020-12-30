@@ -2,7 +2,7 @@
   "name": "twenty-seventeen",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://dejakob.com/2017",
+  "homepage": "http://dejakob.com/2017",
   "dependencies": {
     "moment": "^2.19.4",
     "react": "^16.2.0",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "PUBLIC_URL=/2017 react-scripts build",
+    "build": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
